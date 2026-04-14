@@ -6,8 +6,7 @@
   ...
 }:
 let
-  molasses-update-nix = config.molasses-update-nix;
-  cfg = config.services.molasses-update-nix;
+  molasses-update-nix = config.services.molasses-update-nix;
 in
 {
   options = {
@@ -23,7 +22,5 @@ in
     environment.systemPackages = [
       (pkgs.callPackage ./package.nix)
     ];
-
-    services.molasses-update-nix.enable = true;
   };
 }
