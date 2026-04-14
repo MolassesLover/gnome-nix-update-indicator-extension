@@ -29,7 +29,7 @@ in
 
   services.molasses-update-nix.enable = true;
 
-  environment.systemPackages = [
+  config.environment.systemPackages = [
     (pkgs.callPackage ./package.nix)
   ];
 }
