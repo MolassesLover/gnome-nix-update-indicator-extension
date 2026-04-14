@@ -1,0 +1,8 @@
+{
+  "name": "Nix Update Indicator",
+  "description": "An update indicator for Nix-based systems.",
+  "uuid": "gnome-nix-update@molasses.love",
+  "shell-version": [
+    "49"
+  ]
+}
