@@ -20,16 +20,10 @@ in
   };
 
   config = lib.mkIf molasses-update-nix.enable {
-    system.configurationRevision =
-      let
-        self = inputs.self;
-      in
-      self.shortRev or self.dirtyShortRev or self.lastModified or "molasses-update-nix";
+    environment.systemPackages = [
+      (pkgs.callPackage ./package.nix)
+    ];
+
+    services.molasses-update-nix.enable = true;
   };
-
-  services.molasses-update-nix.enable = true;
-
-  config.environment.systemPackages = [
-    (pkgs.callPackage ./package.nix)
-  ];
 }
