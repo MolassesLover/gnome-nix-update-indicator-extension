@@ -6,7 +6,7 @@
   ...
 }:
 let
-  molasses-update-nix = config.services.molasses-update-nix;
+  molasses-update-nix = config.molasses-update-nix;
 in
 {
   options = {
