@@ -20,7 +20,7 @@ in
 
   config = lib.mkIf molasses-update-nix.enable {
     environment.systemPackages = [
-      (pkgs.callPackage ./package.nix)
+      (pkgs.callPackage ./package.nix { })
     ];
   };
 }
