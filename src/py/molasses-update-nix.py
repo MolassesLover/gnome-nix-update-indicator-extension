@@ -119,14 +119,6 @@ def main():
             raise Exception(
                 "Flake directory not found, despite earlier creation attempt."
             )
-
-        # flake_directory_parent: str = f"{Path.home}/Source/Repositories/GitHub/SquishyDaniel"
-        # flake_directory: str = "{flake_directory_parent}/nix-config"
-
-        #    subprocess.run("git clone --recursive https://github.com/SquishyDaniel/nix-config", cwd=flake_directory_parent, shell=True, check=True)
-        # else:
-        #    subprocess.run("git pull; pkexec nixos-rebuild build-vm --flake .#daniels-pc", cwd=flake_directory, shell=True check=True)
-
-
+            
 if __name__ == "__main__":
     main()
